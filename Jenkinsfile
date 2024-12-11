@@ -1,7 +1,7 @@
 node{
     
 def mavenHome = tool name: 'Maven3.9.9'
-    
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5')), pipelineTriggers([pollSCM('* * * * *')])])    
 stage('ChekoutCode'){
 git credentialsId: 'GajulaPrasad', url: 'https://github.com/prasadlearningplatform/maven-web-application.git'
 }
