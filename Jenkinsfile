@@ -48,5 +48,5 @@ failure {
 sendSlackNotification(currentBuild.result)
 }
 }
+}
 }//pipeline cl
-//uuu
